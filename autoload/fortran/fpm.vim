@@ -27,7 +27,7 @@ function! fortran#fpm#checkTools()
   " Check for FPM
   if !executable(fpm)
     let msg = "Cannot find '" .. fpm .. "'"
-    echo msg
+    echomsg msg
     call popup_notification(msg, #{line: 0, col: 0, highlight: fHl, time: fT})
     return 0
   endif
@@ -40,14 +40,14 @@ function! fortran#fpm#checkTools()
   endif
   if !executable(fpm_fc)
     let msg = "Cannot find '" .. fpm_fc .. "'"
-    echo msg
+    echomsg msg
     call popup_notification(msg, #{line: 0, col: 0, highlight: fHl, time: fT})
     return 0
   endif
 
   let msg = "Using fpm at '" .. exepath(fpm) .. "' and compiler at '"
         \ .. exepath(fpm_fc) .. "'"
-  echo msg
+  echomsg msg
   call popup_notification(msg, #{line: 0, col: 0, highlight: sHl, time: sT})
   return 1
 endfunction
