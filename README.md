@@ -44,7 +44,7 @@ The plugin inculdes `gfortran_fpm.vim` compiler definiton, which defines the cor
 
 ### Autoloaded functions
 
-The plugin includes a bunch of functions which will be autoloaded upon the first use. Just use `:call fortran#fpm#FooBar`. I recommend binding calls to some keys.
+The plugin includes a bunch of functions which will be autoloaded upon the first use. Just use `:call fortran#fpm#FooBar()`. I recommend binding calls to some keys.
 
 The following table lists all defined functions roughly in the order they are meant to be used.
 
