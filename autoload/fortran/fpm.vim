@@ -16,7 +16,7 @@
 " show success popup for, in ms. By
 " default 1000.
 
-function! fortran#fpm#checkTools()
+function! fortran#fpm#CheckTools()
   let fpm = get(g:, "vim_fortran_fpm_fpm", "fpm")
   let gfortran = get(g:, "vim_fortran_fpm_gfortran", "gfortran")
   let fHl = get(g:, "vim_fortran_fpm_failure_hl", "WarningMsg")
