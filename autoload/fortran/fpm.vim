@@ -75,7 +75,6 @@ function! fortran#fpm#RunTests()
           \ .. "\n" .. g:vim_fortran_fpm_failed_tests
     call popup_notification(split(msg, "\n"),
           \ #{line: 0, col: 0, highlight: fHl, time: fT})
-          \ g:FpmTestsFailureMessageHl})
     return 0
   else
     let sHl = get(g:, "vim_fortran_fpm_success_hl", "Comment")
