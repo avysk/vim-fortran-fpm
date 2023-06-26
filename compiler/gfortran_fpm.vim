@@ -22,12 +22,7 @@ endif
 " I think fpm treats warnings as errors and warning messages are never
 " displayed.
 " The generic compiler information is ignored (%-G).
-CompilerSet errorformat=
-            \%A%f:%l:%c:,
-            \%C,
-            \%C %.%#,
-            \%Z%trror:\ %m,
-            \%-G%.%#
+CompilerSet errorformat=%A%f:%l:%c:,%C,%C\ %.%#,%Z%trror:\ %m,%-G%.%#
 
 let &cpo = s:keepcpo
 unlet s:keepcpo
