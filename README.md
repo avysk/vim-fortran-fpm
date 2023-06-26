@@ -1,6 +1,6 @@
 # vim-fortran-fpm
 
-## WHat is it
+## What is it
 
 It is a set of files making working with [fortran package manager](https://fpm.fortran-lang.org/) projects in vim easier.
 
