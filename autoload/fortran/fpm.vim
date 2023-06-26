@@ -86,8 +86,8 @@ function! fortran#fpm#RunTests()
   endif
 endfunction
 
-function! fortran#fpm#Run(...)
-  if get(a:, 0)
+function! fortran#fpm#Run(release)
+  if a:release
     let rel = " --profile release"
   else
     let rel = ""
