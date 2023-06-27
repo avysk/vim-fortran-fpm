@@ -8,7 +8,7 @@ It is a set of files making working with [fortran package manager](https://fpm.f
 
 ### Vim-plug
 
-This is the recommeded way. The right incantation is `Plug "avysk/vim-fortran-fpm`.
+This is the recommeded way. The right incantation is `Plug "avysk/vim-fortran-fpm"`.
 
 ### Manually
 
