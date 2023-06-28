@@ -20,14 +20,16 @@ You can use global variables from the following table to customize plugin behavi
 
 | variable                         | meaning                                             | default value |
 | :------------------------------- | :-------------------------------------------------- | :------------ |
-| `g:vim_fortran_fpm_fpm`          | The name of fpm tool                                | `fpm`         |
+| `g:vim_fortran_fpm_fpm`          | The name of fpm tool (see below)                    | `fpm`         |
 | `g:vim_fortran_fpm_gfortran`     | The name of gfortran                                | `gfortran`    |
 | `g:vim_fortran_fpm_failure_hl`   | Highligt group for failure pop-ups                  | `WarningMSG`  |
 | `g:vim_fortran_fpm_failure_time` | The amount of time in ms to show failure pop-up for | `5000`        |
 | `g:vim_fortran_fpm_success_hl`   | Highligt group for success pop-ups                  | `Comment`     |
 | `g:vim_fortran_fpm_success_time` | The amount of time in ms to show success pop-up for | `1000`        |
 
-**Note**: if you are using Intel Fortran, you do not need neither GNU Fortran nor a correct name for it.
+**Note 1:** if you are using Intel Fortran, you do not need neither GNU Fortran nor a correct name for it.
+
+**Note 2:** if you are using Windows and your fpm is actually link (for example. you use winget), you will have problems, since vim's `executable()` will not be able to find the command. In this case set `g:vim_fortran_fpm_fpm` to the real location of fpm. If you do not want to hardcode the link target, you can use something like `let g:vim_fortran_fpm_fpm = trim(system('pwsh -nop -nol -c "((Get-Command fpm).Source | Get-Item).Target"'))`.
 
 ## What is supported
 
