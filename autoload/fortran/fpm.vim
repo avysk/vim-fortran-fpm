@@ -60,7 +60,7 @@ function! fortran#fpm#EditToml()
   if bufnum > 0
     let switchbuf_old = &switchbuf
     set switchbuf=usetab
-    sbuffer bufnum
+    sbuffer fpm.toml
     let &switchbuf = switchbuf_old
   else
     tabedit fpm.toml
